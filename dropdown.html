@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html ng-app="myDropdown">
+	
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="dropdown.js"></script>
+    <link href="dropdown.css" rel="stylesheet" type="text/css">
+	</head>
+		
+<body ng-controller="ctrl">
+
+
+<select  ng-model="selectedName" ng-options="y.Name for (x,y) in playerlist">
+<option value="">SelectPlayer</option>
+</select>
+
+<div><img src="{{selectedName.image}}" style="height: 254px; width: 300px"/></div>
+<div>
+<p1>NAME: {{selectedName.Name}}</p1>
+
+<p>Date of Birth :{{selectedName.DateofBirth}}</p>
+
+<p>Height :{{selectedName.Height}}</p>
+
+<p>Experience :{{selectedName.Experience}}</p>
+</div>
+</body>		
+
+</html>
